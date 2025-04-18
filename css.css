@@ -1,0 +1,49 @@
+.form_users{
+
+    text-align: center;
+}
+.title{
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+    margin-top: 6vw;
+    color: brown;
+    
+}
+
+.form-group {
+    width: 50vw;
+    align-items: center;
+    margin: 0 auto; /* This centers it horizontally */
+}
+.label_search{
+
+    color: cadetblue;
+    margin-bottom: 5px;
+}
+
+.information{
+
+    align-items: center;
+    margin-top: 5vw;
+    display: grid;
+    justify-content: center;
+    column-gap: 7vw;
+   grid-template-columns: auto auto;
+   
+
+
+}
+
+.form-check-input{
+    float: left;
+}
+
+.btn_save{
+
+
+    float: right;
+    width: auto;
+}
+
+

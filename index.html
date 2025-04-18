@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="./css.css">
+  <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
+  <title>manage users</title>
+</head>
+<body>
+
+    <div class="form_users">
+<h1 class="title">manage users</h1>
+
+<div class="container">
+    <div class="form-group">
+    <label class="label_search" >serach code or domain</label>
+    <input type="search" class="form-control" id="search" placeholder="code or domain">
+    <small id="emailHelp" class="form-text text-muted">.</small><br>
+    <button class="btn btn-primary" id="btn_search">Search</button>
+    </div>
+</div>
+
+<div class="information">
+    <div class="information_data">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          Information data
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><span>Name : </span>moahmed.abusarea</li>
+          <li class="list-group-item"><span>Code: </span>31173</li>
+          <li class="list-group-item"><span>Branch: </span>Safwazaid</li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="information_systems">
+        <!-- الكارت -->
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            Information Systems
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="form-check form-switch d-flex justify-content-between align-items-center">
+                <label class="form-check-label" for="omsSwitch">OMS</label>
+                <input class="form-check-input" type="checkbox" id="omsSwitch">
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="form-check form-switch d-flex justify-content-between align-items-center">
+                <label class="form-check-label" for="axSwitch">AX</label>
+                <input class="form-check-input" type="checkbox" id="axSwitch">
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="form-check form-switch d-flex justify-content-between align-items-center">
+                <label class="form-check-label" for="crmSwitch">CRM</label>
+                <input class="form-check-input" type="checkbox" id="crmSwitch">
+              </div>
+            </li>
+          </ul>
+        </div>
+      
+        <!-- الزرار بعد الكارت بنفس العرض -->
+        <div style="width: 18rem; margin-top: 10px;">
+          <button class="btn btn-primary w-100">Save</button>
+        </div>
+      </div>
+      
+      
+  </div>
+  
+
+</div>
+  
+    <h1 class ="a1"></h1>
+  
+<script src="./bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js.js">
+  </script>
+</body>
+</html>
