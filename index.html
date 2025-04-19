@@ -33,23 +33,22 @@
       <!-- add data -->
 
       <div style="margin-top: 1vw" class="add_data">
-
-        <!-- <div class="card-footer">
+        <div class="card-footer">
           <div class="input-group">
             <select class="form-select" id="system-select">
               <option value="" disabled selected>Select a system</option>
-              <option value="POS">POS</option>
-              <option value="WMS">WMS</option>
-              <option value="ERP">ERP</option>
-              <option value="CRM">CRM</option>
             </select>
-            <button class="btn btn-primary" type="button" onclick="addSystem()">
-              Add
-            </button>
           </div>
+          <br />
+          <button
+            type="button"
+            class="btn btn-primary w-100"
+            id="btn-save"
+            data-bs-toggle="modal"
+          >
+            Add
+          </button>
         </div>
-        <br />
-        <button class="btn btn-primary w-100" id="btn-save">Save</button> -->
       </div>
 
       <!-- infromaton data and Systems -->
@@ -58,11 +57,7 @@
         <div class="information_data" style="margin: 1vw">
           <div class="card">
             <div class="card-header">Information data</div>
-            <ul class="list-group list-group-flush info_list">
-              <!-- <li class="list-group-item"><span>Name : </span>moahmed.abusarea</li>
-          <li class="list-group-item"><span>Code: </span>31173</li>
-          <li class="list-group-item"><span>Branch: </span>Safwazaid</li> -->
-            </ul>
+            <ul class="list-group list-group-flush info_list"></ul>
           </div>
         </div>
 
@@ -70,47 +65,60 @@
         <div class="information_system">
           <div class="card">
             <div class="card-header">Information Systems</div>
-            <ul class="list-group list-group-flush group_systems">
-              <!-- <li class="list-group-item">
-                <div
-                  class="form-check form-switch d-flex justify-content-between align-items-center"
-                >
-                  <label class="form-check-label" for="omsSwitch">OMS</label>
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="omsSwitch"
-                  />
-                </div>
-              </li> -->
-              <!-- <li class="list-group-item">
-                <div
-                  class="form-check form-switch d-flex justify-content-between align-items-center"
-                >
-                  <label class="form-check-label" for="axSwitch">AX</label>
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="axSwitch"
-                  />
-                </div>
-              </li> -->
-              <!-- <li class="list-group-item">
-                <div
-                  class="form-check form-switch d-flex justify-content-between align-items-center"
-                >
-                  <label class="form-check-label" for="crmSwitch">CRM</label>
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="crmSwitch"
-                  />
-                </div>
-              </li> -->
-            </ul>
+            <ul class="list-group list-group-flush group_systems"></ul>
           </div>
-
           <!-- bttn save -->
+        </div>
+      </div>
+    </div>
+
+    <!-- oms from  -->
+
+    <div
+      class="modal fade"
+      id="OMS"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label"
+                  >Recipient:</label
+                >
+                <input type="text" class="form-control" id="recipient-name" />
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label"
+                  >Message:</label
+                >
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+            id="btn_close"
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
         </div>
       </div>
     </div>

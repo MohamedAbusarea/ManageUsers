@@ -17,7 +17,7 @@ let data = [
     name: "ahmed.ms",
     branch: "manial",
     code: "3118",
-    systems: ["AX", "OMS", "CRM"],
+    systems: ["AX", "CRM Mylo", "CRM"],
   },
 
   {
@@ -42,7 +42,6 @@ systems = [
 
 //add information data -3
 function add_information(index) {
-  console.log(index);
   if (index === -1) {
     err_user();
     return;
@@ -79,7 +78,6 @@ function show_systems(index) {
 
   data[index].systems.forEach((i) => {
     document.getElementById(`sys_${i}`).checked = true;
-    console.log(i);
   });
 }
 
@@ -89,12 +87,13 @@ function info_data(v_search, type) {
   if (type === "num") {
     index = data.findIndex((f) => f.code.trim() === v_search);
     add_information(index);
+    show_edit(index);
     show_systems(index);
   } else if (type === "str") {
     index = data.findIndex((f) => f.name.trim() === v_search);
     add_information(index);
+    show_edit(index);
     show_systems(index);
-  } else {
   }
 }
 
@@ -125,34 +124,32 @@ function err_user() {
 
 //show edit
 
-function show_edit() {
-  document.getElementById("btn_search").addEventListener("click", () => {
-    document.querySelector(".add_data").innerHTML = `
-      <div class="card-footer">
-          <div class="input-group">
-            <select class="form-select" id="system-select">
-              <option value="" disabled selected>Select a system</option>
-              <option value="POS">POS</option>
-              <option value="WMS">WMS</option>
-              <option value="ERP">ERP</option>
-              <option value="CRM">CRM</option>
-            </select>
-            <button class="btn btn-primary" type="button" onclick="addSystem()">
-              Add
-            </button>
-          </div>
-        </div>
-        <br />
-        <button class="btn btn-primary w-100" id="btn-save">Save</button>
-      
-        `;
-
-    let n = document.querySelector(".form-check-input");
-
-    if (n) {
-      document.querySelector(".add_data").style.display = "block";
-    }
+function show_edit(index) {
+  let n1 = data[index].systems;
+  sys = systems.filter((item) => !data[index].systems.includes(item));
+  sys.forEach((s) => {
+    document.querySelector("#system-select").innerHTML += `
+        <option value="${s}">${s}</option>
+  `;
   });
+  document.querySelector(".add_data").style.display = "block";
+  document.querySelector("#btn-save").style.display = "block";
 }
 
-show_edit();
+// show form
+
+document.getElementById("system-select").addEventListener("change", () => {
+  n = document.getElementById("system-select").value;
+  console.log(n);
+  if (n === "OMS") {
+    document.getElementById("btn-save").setAttribute("data-bs-target", `#${n}`);
+  }
+});
+
+//solve issue bloked
+document.getElementById("btn_close").addEventListener("click", function () {
+  document.activeElement.blur(); // Prevent accessibility issue
+  const modal = document.getElementById("OMS");
+  const modalInstance = bootstrap.Modal.getInstance(modal);
+  modalInstance.hide();
+});

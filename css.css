@@ -65,7 +65,10 @@
   cursor: pointer;
 }
 
-.add_data,
+.add_data {
+  display: none;
+}
 .btn_save {
   display: none;
 }
+
