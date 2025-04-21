@@ -147,9 +147,9 @@ document.getElementById("system-select").addEventListener("change", () => {
 });
 
 //solve issue bloked
-document.getElementById("btn_close").addEventListener("click", function () {
-  document.activeElement.blur(); // Prevent accessibility issue
-  const modal = document.getElementById("OMS");
-  const modalInstance = bootstrap.Modal.getInstance(modal);
-  modalInstance.hide();
-});
+// document.getElementById("btn_close").addEventListener("click", function () {
+//   document.activeElement.blur(); // Prevent accessibility issue
+//   const modal = document.getElementById("OMS");
+//   const modalInstance = bootstrap.Modal.getInstance(modal);
+//   modalInstance.hide();
+// });
