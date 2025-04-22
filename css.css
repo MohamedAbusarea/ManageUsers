@@ -1,3 +1,9 @@
+body{
+
+background-image: url("./IMG/background.png");
+
+}
+
 .form_users {
   text-align: center;
   display: grid;
@@ -45,7 +51,7 @@
   text-align: center;
 }
 
-.alert_info {
+.alert_info,.alert-success {
   position: fixed;
   top: 0px;
   padding: 0.5vw 1vw;
@@ -72,3 +78,7 @@
   display: none;
 }
 
+.form-select option{
+
+  cursor: pointer !important;
+}
