@@ -3,17 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="./css.css" />
-    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./sweetalert2/dist/sweetalert2.min.css"/>
+    <link rel="stylesheet" href="./vendor/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./vendor/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./vendor/sweetalert2/dist/sweetalert2.min.css"/>
+  
     <title>manage users</title>
   </head>
-  <body>
-    <!-- alert notifcation -->
+  <body id="main-body">
+        <!-- alert notifcation -->
     <div class="alert_info"></div>
+
+
+    
+   
+    
+    
+
   
-    <!-- form user search -->
+    <!-- form user-->
     <div class="form_users">
       <div class="container">
         <h1 class="title">Manage users</h1>
@@ -36,7 +44,7 @@
       <div style="margin-top: 1vw" class="add_data">
         <div class="card-footer">
           <div class="input-group">
-            <select class="form-select" id="system-select">
+            <select class="form-select  searchable-select" id="system-select">
               <option value="" disabled selected>Select a system</option>
             </select>
           </div>
@@ -67,11 +75,21 @@
           <div class="card">
             <div class="card-header">Information Systems</div>
             <ul class="list-group list-group-flush group_systems"></ul>
+            
+            
           </div>
-          <!-- bttn save -->
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
 
     <!-- oms from  -->
 
@@ -82,102 +100,36 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">OMS user</h1>
-            <button
-              type="button"
-              class="btn-close close_form_OMS"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form  id="omsForm" class="needs-validation" novalidate>
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label"
-                  >name:</label
-                >
-                <input type="text" class="form-control" id="recipient-name" required />
-              </div>
-
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label"
-                  >UserLogin:</label
-                >
-                <input type="text" class="form-control" id="recipient-name"  required />
-              </div>
-
-              <div class="mb-3">
-              <label class="col-form-label">Job:</label>
-              <select class="form-select" aria-label="Job">
-                
-                <option value="" disabled></option>
-                <option value="1">موظف نسبة الخصم</option>
-                <option value="2">موظف مبيعات</option>
-                <option value="3">محاسب/ مشرف/ مدير فرع</option>
-                <option value="4">بروموتر</option>
-                <option value="6">موظف كول سنتر</option>
-                <option value="7">موظف أوت ليت</option>
-                <option value="8">Online_Store_Associate</option>
-                <option value="9">Miele_Agencies</option>
-              </select>
-            </div>
-
-            <div class="mb-3">
-              <label class="col-form-label">Language:</label>
-              <select class="form-select" aria-label="Job" required>
-                <option value="" disabled></option>
-                <option value="1">ar_EG</option>
-                <option value="2">en_EG</option>
-              </select>
-            </div>
-
-            <div class="mb-3">
-              <label for="recipient-name" class="col-form-label"
-                >Details</label
-              >
-              <input type="text" class="form-control"/>
-            </div>
-
-
-
-            <div class="mb-3">
-              <label class="col-form-label">work area</label>
-              <select class="form-select" aria-label="Job" required>
-                <option value="263" data-select2-id="34">10th Corporate Sales WH</option>
-                <option value="269" data-select2-id="35">10th of Domestic Returned-64</option>
-                <option value="261" data-select2-id="36">10th of Ramadan WH</option>
-                <option value="262" data-select2-id="37">10th Show Room WH</option>
-                <option value="1" data-select2-id="38">10th Tech Club WH</option>
-              </select>
-            </div>
-
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-            id="btn_close"
-              type="button"
-              class="btn btn-secondary close_form_OMS"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary" id="save_OMS">Save</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
 
     
+      
+    </div>
+ <!-- end oms from  -->
 
-    <script src="./bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./sweetalert2/dist/sweetalert2.min.js"></script>
-    <script src="./js.js"></script>
+
+
+ <!--Change Branch-->
+
+ <div id="ChangeBranch">
+
+
+
+ </div>
+
+
+
+
+
+
+   
+    <script src="./vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script> <!--bootstrab-->
+    <script src="./vendor/sweetalert2/dist/sweetalert2.min.js"></script> <!--sweetalert2-->
+    <script type="module" src="js/main.js"></script> <!--main-->
+    <script type="module" src="vendor/SearchOfSelect.js"></script> <!--search of select-->
+ 
+  
+
+    
+    
   </body>
 </html>

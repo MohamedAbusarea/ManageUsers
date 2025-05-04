@@ -1,0 +1,111 @@
+body {
+    background-image: url('../IMG/’ManageUsers3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.form_users {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+}
+.title {
+  display: grid;
+  grid-template-columns: auto;
+  text-align: center;
+  margin-top: 6vw;
+  color: rgb(255, 255, 255);
+}
+
+.form-group {
+  width: 50vw;
+  align-items: center;
+  margin: 0 auto; /* This centers it horizontally */
+}
+.label_search {
+  color: rgb(245, 249, 249);
+  margin-bottom: 1vw;
+}
+
+.information {
+  align-items: center;
+  margin-top: 5vw;
+  display: grid;
+  justify-content: center;
+  column-gap: 6vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.form-check-input {
+  float: left;
+}
+
+.btn_save {
+  float: right;
+  width: auto;
+}
+
+.alert {
+  width: 30vw;
+  text-align: center;
+}
+
+.alert_info,.alert-success {
+  position: fixed;
+  top: 0px;
+  padding: 0.5vw 1vw;
+  font-size: 1.5vw;
+  border-radius: 1vw;
+  opacity: 0.7;
+}
+
+/* .information_systems .card {
+  width: 25vw !important;
+} */
+
+.information_system {
+  margin-right: 2vw;
+}
+.form-check-input {
+  cursor: pointer;
+}
+
+.add_data {
+  display: none;
+}
+.btn_save {
+  display: none;
+}
+
+.form-select option{
+
+  cursor: pointer !important;
+}
+
+
+.edit_branch{
+position: relative;
+float: right;
+background: none !important;
+border: none !important;
+
+}
+.edit_branch:hover{
+  color: cadetblue;
+  cursor: pointer;
+}
+
+
+.information_system .card-header{
+
+
+  font-weight: bold;
+
+
+}
+.information_data .card-header{
+  font-weight: bold;
+
+}
